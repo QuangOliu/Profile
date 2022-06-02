@@ -1,0 +1,91 @@
+.port {
+  width: 100%;
+  height: auto;
+  padding: 120px 0;
+  &__title {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  &__show {
+    p {
+      display: block;
+    }
+  }
+
+  &__item {
+    padding: 0 15px;
+    border-radius: 10px;
+    a,
+    img {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+    }
+    a:hover img {
+      transform: scale(1.1);
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    display: block;
+    width: 65px;
+    height: 65px;
+    border: 2px solid #7e7e7e;
+    border-radius: 50%;
+    z-index: 6;
+    transition: 0.5s;
+    top: 50%;
+  }
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-color: #000;
+    border-color: #fff;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: block;
+    content: url('../../public/assets/images/arrow.svg');
+    filter: invert(0.4);
+  }
+
+  .slick-prev:before {
+    transform: rotate(-180deg);
+  }
+}
+
+.site--dark {
+  .port {
+    transition: all 0.234s ease-in-out;
+    color: #fff;
+    background-color: #111319;
+    p {
+      color: #a9afc3;
+    }
+    h3 {
+      color: #fff;
+    }
+    &__title {
+      color: #fff;
+    }
+    &__label {
+      color: #fff;
+    }
+    .slick-prev:hover,
+    .slick-next:hover {
+      background-color: #000;
+      border-color: #fff;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+      filter: invert(1);
+    }
+  }
+}

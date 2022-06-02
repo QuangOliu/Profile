@@ -1,0 +1,143 @@
+.service {
+  transition: all 0.24s ease-in-out;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  width: 100%;
+  height: auto;
+  background-color: #f5f8fc;
+  padding: 120px 0 90px;
+  li {
+    // margin: 0;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  &__des {
+    max-width: 600px;
+  }
+
+  &__list {
+    margin: 0 0 0 -15px;
+    padding: 0;
+    padding-top: 50px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: inline;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    // flex: 1;
+    width: 25%;
+  }
+
+  &__inner {
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    cursor: pointer;
+    h4 {
+      font-weight: 600;
+      font-size: 24px;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+  }
+  &__inner:hover &__bg {
+    background-color: #111319;
+    img {
+      filter: invert(1);
+    }
+    h4 {
+      color: #fff;
+    }
+    .service__more {
+      color: #fff;
+    }
+  }
+  &__bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: 10px;
+    margin: 0 15px;
+    padding: 50px 100px 45px 50px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .service {
+    padding: 90px 0;
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .service {
+    &__item {
+      width: 100%;
+    }
+  }
+}
+
+.site--dark {
+  .service {
+    color: white;
+    transition: all .23s ease-in-out;
+    background-color: #191c26;
+    p {
+      color: #a9afc3;
+    }
+    &__inner {
+      h4 {
+        color: #fff;
+      }
+    }
+    &__inner:hover &__bg {
+      img {
+        filter: invert(1);
+      }
+      .service__more {
+        color: #fff;
+      }
+    }
+    &__bg {
+      background-color: #000;
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+}

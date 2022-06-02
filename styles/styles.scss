@@ -1,0 +1,42 @@
+//Include styles for Modern Browsers
+@charset 'UTF-8';
+
+// Reset
+@import 'base/reset';
+
+// Variables
+@import 'base/variables';
+
+//Helpers classes
+@import 'base/helpers';
+@import 'base/functions';
+@import 'base/mixins';
+
+// Base Style
+@import 'base/fonts';
+@import 'base/icons';
+@import 'base/grid';
+@import 'base/extends';
+@import 'base/typography';
+@import 'base/form';
+@import 'base/table';
+
+// Layouts
+@import 'layouts/layout';
+@import 'layouts/navigation';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Component
+@import 'component/home.scss';
+@import 'component/about.scss';
+@import 'component/servise.scss';
+@import './component/port.scss';
+@import './component/test.scss';
+@import './component/blog.scss';
+@import './component/contact.scss';
+//Modal
+@import './component/modal.scss';
+@import './component/mainpart.scss';
+
+@import './base/media';

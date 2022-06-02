@@ -1,0 +1,149 @@
+.contact {
+  width: 100%;
+  height: auto;
+  background-color: #f5f8fc;
+  padding: 120px 0;
+  ul,
+  li {
+    padding: 0;
+  }
+  &__title {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    line-height: 1;
+    width: 100%;
+    height: auto;
+  }
+
+  &__des {
+    max-width: 600px;
+  }
+  &__info {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 33.3333%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    background-color: #fff;
+    padding: 33px 35px 41px;
+    margin: 0 15px;
+    border-radius: 6px;
+    p {
+      margin: 0;
+    }
+  }
+  &__icon {
+    width: 55px;
+    height: 55px;
+    background: #34495e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    img {
+      filter: invert(1);
+    }
+  }
+  &__contact {
+    ul {
+      a,
+      p {
+        list-style: none;
+        line-height: 1.5;
+        font-size: 16px;
+        color: #7e7e7e;
+      }
+    }
+  }
+  &__type {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  &__mainpart {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &__form {
+    width: calc(50% - 15px);
+    margin-right: 15px;
+  }
+  &__map {
+    width: calc(50% - 15px);
+    margin-left: 15px;
+    iframe {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(1);
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .contact {
+    padding: 90px 0;
+    &__title {
+      font-size: 35px;
+    }
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    &__info {
+      padding-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contact {
+    &__item {
+      width: 100%;
+    }
+    &__map,
+    &__form {
+      width: 100%;
+      margin: 0;
+    }
+    &__form {
+      margin-bottom: 30px;
+    }
+    &__map {
+      height: 375px;
+    }
+  }
+}
+
+.site--dark {
+  .contact {
+    background-color: #191c26;
+    transition: all .23s ease-in-out;
+    p {
+      color: #a9afc3;
+    }
+    h3 {
+      color: #fff;
+    }
+    &__inner {
+      background-color: #111319;
+    }
+  }
+}
