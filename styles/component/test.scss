@@ -27,13 +27,17 @@
     width: 100%;
     height: auto;
     padding-top: 60px;
+    ul {
+      margin: 0 -15px;
+    }
     li {
       padding: 0 15px;
+      height: 100%;
     }
   }
   &__list-inner {
     width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
     background-color: #fff;
     padding: 50px 50px 60px;
@@ -43,12 +47,14 @@
   &__info {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
   }
   &__impo {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     img {
       border-radius: 5px;
@@ -77,6 +83,64 @@
   }
   .slick-track {
     display: flex;
+  }
+  .slick-list {
+    display: flex;
+  }
+
+  .slick-initialized .slick-slide {
+    height: 100%;
+    > div {
+      height: 100%;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .test {
+    padding: 45px 0;
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    &__list {
+      padding-top: 20px;
+      ul {
+        li {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    &__list-inner {
+      padding: 20px;
+      padding-top: 50px;
+    }
+    &__impo {
+      justify-content: center;
+      div {
+        padding: 0;
+        text-align: center;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+    }
+    &__special {
+      margin: 0;
+    }
+    &__info {
+      margin-bottom: 20px;
+    }
+    &__name {
+      font-size: 18px;
+    }
+    img.test__quote {
+      display: none;
+    }
   }
 }
 .site--dark {

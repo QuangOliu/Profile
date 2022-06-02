@@ -87,6 +87,47 @@
       padding-left: 20px;
     }
   }
+  &__quote {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    p {
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 23px;
+      border-left: 2px solid #1a1a1a;
+      padding-left: 30px;
+      color: #1a1a1a;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      a {
+        padding: 0 7px;
+        display: flex;
+        transition: 0.3s;
+        margin: 0 5px;
+        padding: 0;
+        img {
+          fill: transparent;
+          width: 20px;
+          height: 20px;
+          padding: 4px;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 1000px) {
   .modal {
@@ -97,7 +138,7 @@
       padding: 20px;
       margin: 0 30px;
       left: auto;
-      transform: translate(0,0);
+      transform: translate(0, 0);
     }
     &__btn {
       top: 200px;
@@ -111,6 +152,12 @@
       background-color: #12161f;
       li {
         color: #a9afc3;
+      }
+    }
+    &__quote {
+      p {
+        border-left: 2px solid white;
+        color: white;
       }
     }
   }

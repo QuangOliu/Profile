@@ -3,7 +3,7 @@ export const dataAbout = {
   info: {
     name: 'Tran Minh Quang',
     position:
-      "I'm a Freelancer Front-end Developer with over 1 years of experience. I'm from San Francisco. I code and create web elements for amazing people around the world. I like work with new people.",
+      "I'm a intern Web developer In Sentius, over 3 months of professional experience.",
     experiance: '3+ Months',
   },
   skill: {
@@ -12,18 +12,18 @@ export const dataAbout = {
     list: [
       {
         id: 1,
-        name: 'React.Js',
-        percent: 50,
+        name: 'HTML & CSS',
+        percent: 80,
       },
       {
         id: 2,
-        name: 'React.Js',
-        percent: 10,
+        name: 'JavaScript',
+        percent: 75,
       },
       {
         id: 3,
-        name: 'React.Js',
-        percent: 50,
+        name: 'GIT',
+        percent: 70,
       },
       {
         id: 4,
@@ -32,13 +32,13 @@ export const dataAbout = {
       },
       {
         id: 6,
-        name: 'React.Js',
-        percent: 50,
+        name: 'Wordpress',
+        percent: 30,
       },
       {
         id: 7,
-        name: 'React.Js',
-        percent: 50,
+        name: 'PHP',
+        percent: 30,
       },
     ],
   },

@@ -1,4 +1,6 @@
-export default function Mainpart({ data = {} }) {
+import { memo } from 'react';
+
+function Mainpart({ data = {} }) {
   const { para, strong, input } = data;
   return (
     <div className='mainpart'>
@@ -57,3 +59,4 @@ export default function Mainpart({ data = {} }) {
     </div>
   );
 }
+export default memo (Mainpart);

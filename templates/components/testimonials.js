@@ -21,7 +21,7 @@ export default function Testimonials({ data = {}, id }) {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
           arrows: false,
         },
       },

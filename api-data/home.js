@@ -1,8 +1,8 @@
 export const dataHome = {
   img: '/assets/images/anhavt.jpg',
   hello: "Hello, I'm Quang Oliu",
-  typing: ["Hi, I'm Quang", 'Web developer','Quang handsome NO.1'],
-  about: "I'm a Freelancer Front-end React Developer based In USA, over 6 years of professional experience.",
+  typing: ["Hi, I'm Quang", "I'm 20 years old","I'm handsome NO.1", 'Right ?????'],
+  about: "I'm a intern Web developer In Sentius, over 3 months of professional experience.",
   social: [
     {
       id:1,

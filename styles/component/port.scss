@@ -34,33 +34,35 @@
   }
   .slick-prev,
   .slick-next {
-    display: block;
-    width: 65px;
-    height: 65px;
-    border: 2px solid #7e7e7e;
-    border-radius: 50%;
-    z-index: 6;
-    transition: 0.5s;
     top: 50%;
-  }
-  .slick-prev:hover,
-  .slick-next:hover {
-    background-color: #000;
-    border-color: #fff;
-  }
-
-  .slick-prev:before,
-  .slick-next:before {
-    display: block;
-    content: url('../../public/assets/images/arrow.svg');
-    filter: invert(0.4);
-  }
-
-  .slick-prev:before {
-    transform: rotate(-180deg);
   }
 }
 
+@media (max-width: 375px) {
+  .port {
+    padding: 45px 0;
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    &__list {
+      padding-top: 20px;
+      ul {
+        li {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    &__item {
+      padding:0;
+    }
+    .slick-slider.slick-initialized {
+      padding-bottom: 20px;
+    }
+  }
+}
 .site--dark {
   .port {
     transition: all 0.234s ease-in-out;

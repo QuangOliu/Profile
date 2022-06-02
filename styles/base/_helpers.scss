@@ -85,9 +85,62 @@
   line-height: 1.5;
   transition: all 0.25s ease-in-out;
 }
+
+.slick-slider.slick-initialized {
+  padding-bottom: 40px;
+}
+.port,
+.blog {
+  .slick-prev,
+  .slick-next {
+    display: block;
+    width: 65px;
+    height: 65px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    z-index: 6;
+    transition: 0.5s;
+    top: 41%;
+  }
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-color: #000;
+    border-color: #fff;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: block;
+    content: url('../../public/assets/images/arrow.svg');
+    filter: invert(0.5);
+  }
+  .slick-prev:before:hover,
+  .slick-next:before:hover {
+    filter: invert(1) !important;
+    opacity: 1 !important;
+  }
+
+  .slick-prev {
+    left: 0;
+    &:before {
+      transform: rotate(-180deg);
+    }
+  }
+  .slick-next{
+    right: 0;
+  }
+}
 @media (max-width: 1199px) {
   .body {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media (max-width:375px) {
+  .body {
+    p{
+      font-size: 15px;
+    }
   }
 }

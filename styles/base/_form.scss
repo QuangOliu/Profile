@@ -18,11 +18,23 @@
     background: #fff;
     border-radius: 6px;
   }
+
   &:active,
   &:hover {
     background-color: $btn-color-hover;
     border-color: $btn-color-hover;
     color: $white;
+  }
+}
+@media (max-width: 375px) {
+  .btn {
+    &--hard {
+      padding: 13px 30px;
+      background: #fff;
+      width: 100%;
+      text-align: center;
+      border-radius: 6px;
+    }
   }
 }
 .site--dark {

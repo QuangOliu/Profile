@@ -1,8 +1,7 @@
-import { defaultConfig } from 'next/dist/server/config-shared';
 import { useEffect } from 'react';
 import { memo } from 'react';
 
-function ServiceModal({ data = {} }) {
+function ServiceModal({ data = {}, social = [] }) {
   const { title, img, para } = data;
 
   useEffect(() => {
@@ -13,14 +12,17 @@ function ServiceModal({ data = {} }) {
     const body = document.querySelector('.site');
     ///
     function showBuyTickets(id) {
-      // console.log(id);
-      modals[id].classList.add('active');
-      body.classList.add('is-fixed')
+      if (modals[id]) {
+        modals[id].classList.add('active');
+        // body.classList.add('is-fixed');
+      }
     }
 
     function hidenBuy(id) {
-      modals[id].classList.remove('active');
-      body.classList.remove('is-fixed')
+      if (modals[id]) {
+        modals[id].classList.remove('active');
+        // body.classList.remove('is-fixed');
+      }
     }
 
     closes.forEach((item, index) =>
@@ -35,7 +37,7 @@ function ServiceModal({ data = {} }) {
       })
     );
 
-    stops.forEach((item, index) =>
+    stops.forEach((item) =>
       item.addEventListener('click', (Event) => {
         Event.stopPropagation();
       })
@@ -60,24 +62,36 @@ function ServiceModal({ data = {} }) {
             </div>
             <div className='modal__box js-stop'>
               <img src={img} alt={title} />
+              <div className='modal__head'>
+                <span>{data.date}</span>
+                <span>{data.job}</span>
+              </div>
               <div className='modal__content'>
-                {para.map((item) => {
+                {para.map((item, index) => {
                   const { title, desc } = item;
                   return (
-                    <div key={item.id}>
+                    <div key={index}>
                       <h3 className='modal__title'>{title}</h3>
-                      {desc.map((des) => {
+                      {desc.map((des, index) => {
                         if (des.type == 'para') {
-                          return <p key={des.id}>{des.des}</p>;
+                          return <p key={index}>{des.des}</p>;
                         }
 
                         if (des.type == 'list') {
                           return (
-                            <ul key={des.id} className='modal__list'>
+                            <ul key={index} className='modal__list'>
                               {des.des.map((item, index) => {
                                 return <li key={index}>{item}</li>;
                               })}
                             </ul>
+                          );
+                        }
+
+                        if (des.type == 'quote') {
+                          return (
+                            <div key={index} className='modal__quote'>
+                              <p>{des.des}</p>
+                            </div>
                           );
                         }
                       })}
@@ -85,6 +99,23 @@ function ServiceModal({ data = {} }) {
                   );
                 })}
               </div>
+
+              {social && (
+                <div className='modal__social'>
+                  <span>Share:</span>
+                  <ul>
+                    {social.map((item) => {
+                      return (
+                        <li key={item.id}>
+                          <a href={item.link}>
+                            <img src={item.icon} alt={item.type} />
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>

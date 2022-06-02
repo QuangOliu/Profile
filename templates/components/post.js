@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-export default function Portfolio({ data = {}, id }) {
+function Portfolio({ data = {}, id }) {
   const { ports } = data;
   const settings = {
     dots: false,
@@ -60,3 +59,5 @@ export default function Portfolio({ data = {}, id }) {
     </div>
   );
 }
+
+export default memo(Portfolio);

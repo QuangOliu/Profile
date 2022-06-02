@@ -1,15 +1,14 @@
 import ServiceModal from './modal';
-
+import { memo } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function Blog({ data = {}, id }) {
-  const { title, des, list } = data;
-
+function Blog({ data = {}, id }) {
+  const { title, des, list, social } = data;
   const settings = {
-    dots: false,
-    infinite: true,
+    dots: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -30,7 +29,9 @@ export default function Blog({ data = {}, id }) {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          dots: true,
+          dots: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
           slidesToScroll: 1,
           arrows: false,
         },
@@ -66,19 +67,24 @@ export default function Blog({ data = {}, id }) {
                           </div>
                         </div>
                       </div>
-
-                      {/* */}
                     </li>
                   );
                 })}
               </Slider>
             </ul>
-            {list.map((item, index) => {
-              <ServiceModal key={index} data={item.modal} />;
-            })}
+            <div className='blog__modal'>
+              {list.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <ServiceModal data={item.modal} social={social} />
+                  </li>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
 }
+export default memo(Blog);

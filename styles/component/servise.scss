@@ -27,7 +27,7 @@
   }
 
   &__list {
-    margin: 0 0 0 -15px;
+    margin: 0 -15px;
     padding: 0;
     padding-top: 50px;
     list-style-type: none;
@@ -73,7 +73,7 @@
     height: 100%;
     border-radius: 10px;
     margin: 0 15px;
-    padding: 50px 100px 45px 50px;
+    padding: 40px;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
     img {
@@ -101,6 +101,15 @@
       width: 50%;
       margin-bottom: 30px;
     }
+    &__list {
+      padding-top: 20px;
+      ul {
+        li {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    } 
   }
 }
 
@@ -111,11 +120,48 @@
     }
   }
 }
+@media (max-width: 375px) {
+  .service {
+    padding: 45px 0;
 
+    &__title {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    &__list {
+      padding-top: 20px;
+      ul {
+        li {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    &__bg {
+      padding: 20px;
+    }
+    &__inner {
+      padding: 0;
+      h4 {
+        font-size: 22px;
+      }
+    }
+    &__more {
+      font-size: 18px;
+    }
+    &__content {
+      padding: 30px 0;
+    }
+    &__skill,
+    &__info {
+      margin-bottom: 20px;
+    }
+  }
+}
 .site--dark {
   .service {
     color: white;
-    transition: all .23s ease-in-out;
+    transition: all 0.23s ease-in-out;
     background-color: #191c26;
     p {
       color: #a9afc3;

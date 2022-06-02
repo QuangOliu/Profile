@@ -24,15 +24,8 @@ import { dataContact } from '../api-data/contact';
 import { useEffect } from 'react';
 // import
 export default function Home() {
-  const ID =[
-    "data1",
-    "data2",
-    "data3",
-    "data4",
-    "data5",
-    "data6",
-    "data7",
-  ]
+  const ID = ['data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'data7'];
+
   return (
     <div className='site'>
       <Head>

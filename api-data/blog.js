@@ -50,38 +50,6 @@ export const dataBlog = {
             ],
           },
         ],
-        social: [
-          {
-            id: 1,
-            link: '',
-            icon: '/assets/images/facebook.png',
-            type: 'facebook',
-          },
-          {
-            id: 2,
-            link: '',
-            icon: '/assets/images/twitter.png',
-            type: 'twitter',
-          },
-          {
-            id: 3,
-            link: '',
-            icon: '/assets/images/instagram.png',
-            type: 'instagram',
-          },
-          {
-            id: 4,
-            link: '',
-            icon: '/assets/images/dribble.png',
-            type: 'dribble',
-          },
-          {
-            id: 5,
-            link: '',
-            icon: '/assets/images/linkdin.png',
-            type: 'linkdin',
-          },
-        ],
       },
     },
     {
@@ -130,38 +98,6 @@ export const dataBlog = {
                 des: 'The trick here is to look slowly, and then look again. Take the time to look in detail and to look at the same thing from different angles, with different light, long lenses and wide lenses. Then move to the left a bit. You may never feel the need to leave the house again.',
               },
             ],
-          },
-        ],
-        social: [
-          {
-            id: 1,
-            link: '',
-            icon: '/assets/images/facebook.png',
-            type: 'facebook',
-          },
-          {
-            id: 2,
-            link: '',
-            icon: '/assets/images/twitter.png',
-            type: 'twitter',
-          },
-          {
-            id: 3,
-            link: '',
-            icon: '/assets/images/instagram.png',
-            type: 'instagram',
-          },
-          {
-            id: 4,
-            link: '',
-            icon: '/assets/images/dribble.png',
-            type: 'dribble',
-          },
-          {
-            id: 5,
-            link: '',
-            icon: '/assets/images/linkdin.png',
-            type: 'linkdin',
           },
         ],
       },
@@ -214,38 +150,6 @@ export const dataBlog = {
             ],
           },
         ],
-        social: [
-          {
-            id: 1,
-            link: '',
-            icon: '/assets/images/facebook.png',
-            type: 'facebook',
-          },
-          {
-            id: 2,
-            link: '',
-            icon: '/assets/images/twitter.png',
-            type: 'twitter',
-          },
-          {
-            id: 3,
-            link: '',
-            icon: '/assets/images/instagram.png',
-            type: 'instagram',
-          },
-          {
-            id: 4,
-            link: '',
-            icon: '/assets/images/dribble.png',
-            type: 'dribble',
-          },
-          {
-            id: 5,
-            link: '',
-            icon: '/assets/images/linkdin.png',
-            type: 'linkdin',
-          },
-        ],
       },
     },
     {
@@ -296,39 +200,40 @@ export const dataBlog = {
             ],
           },
         ],
-        social: [
-          {
-            id: 1,
-            link: '',
-            icon: '/assets/images/facebook.png',
-            type: 'facebook',
-          },
-          {
-            id: 2,
-            link: '',
-            icon: '/assets/images/twitter.png',
-            type: 'twitter',
-          },
-          {
-            id: 3,
-            link: '',
-            icon: '/assets/images/instagram.png',
-            type: 'instagram',
-          },
-          {
-            id: 4,
-            link: '',
-            icon: '/assets/images/dribble.png',
-            type: 'dribble',
-          },
-          {
-            id: 5,
-            link: '',
-            icon: '/assets/images/linkdin.png',
-            type: 'linkdin',
-          },
-        ],
       },
+    },
+  ],
+
+  social: [
+    {
+      id: 1,
+      link: '',
+      icon: '/assets/images/facebook.png',
+      type: 'facebook',
+    },
+    {
+      id: 2,
+      link: '',
+      icon: '/assets/images/twitter.png',
+      type: 'twitter',
+    },
+    {
+      id: 3,
+      link: '',
+      icon: '/assets/images/instagram.png',
+      type: 'instagram',
+    },
+    {
+      id: 4,
+      link: '',
+      icon: '/assets/images/dribbble.png',
+      type: 'dribble',
+    },
+    {
+      id: 5,
+      link: '',
+      icon: '/assets/images/linkedin.png',
+      type: 'linkdin',
     },
   ],
 };

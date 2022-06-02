@@ -1,4 +1,6 @@
-export default function About({ data = {}, id }) {
+import { memo } from "react";
+
+function About({ data = {}, id }) {
   const { info, skill, img } = data;
   return (
     <div className='about' id={id}>
@@ -58,3 +60,5 @@ export default function About({ data = {}, id }) {
     </div>
   );
 }
+
+export default memo(About);

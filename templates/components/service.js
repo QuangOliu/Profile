@@ -1,27 +1,12 @@
 import { BsArrowRight } from 'react-icons/bs';
 import ServiceModal from './modal';
-import { useEffect } from 'react';
+import { useEffect, memo } from 'react';
 
-export default function Service({ data = {} ,id}) {
+export default memo(function Service({ data = {}, id }) {
   const { title, des, list } = data;
 
-  // useEffect(() => {
-  //   const items = document.querySelectorAll('.js-item');
-  //   items.forEach((item) => {
-  //     item.addEventListener('mousemove', (e) => {
-  //       const x = e.offsetX;
-  //       const width = e.toElement.clientWidth;
-  //       // item.style.width = x;
-  //       item.style.transform = `rotateY(${x/5}deg)`;
-  //       setTimeout(function () {
-  //         item.style.transform = '';
-  //       }, 500);
-  //     });
-  //   });
-  // });
-
   return (
-    <div className='service'  id={id}>
+    <div className='service' id={id}>
       <div className='container'>
         <div className='service__wrap'>
           <h3 className='service__title'>{title}</h3>
@@ -29,7 +14,7 @@ export default function Service({ data = {} ,id}) {
 
           <ul className='service__list'>
             {list.map((item) => {
-              const { id, icon, title, modal } = item;
+              const { id, icon, title } = item;
 
               return (
                 <li key={id} className='service__item'>
@@ -47,6 +32,16 @@ export default function Service({ data = {} ,id}) {
                       </div>
                     </div>
                   </div>
+                </li>
+              );
+            })}
+          </ul>
+          <ul>
+            {list.map((item) => {
+              const { id, modal } = item;
+
+              return (
+                <li key={id}>
                   <ServiceModal data={modal} />
                 </li>
               );
@@ -56,4 +51,4 @@ export default function Service({ data = {} ,id}) {
       </div>
     </div>
   );
-}
+});
