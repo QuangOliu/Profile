@@ -42,6 +42,7 @@ function Mainpart({ data = {} }) {
               if (item.child === 'button') {
                 return (
                   <button
+                  className='btn btn--hard'
                     key={index}
                     name={item.name}
                     type={item.type}

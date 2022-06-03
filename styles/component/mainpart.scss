@@ -65,10 +65,16 @@
   }
 }
 
+@media (max-width: 375px) {
+  .mainpart {
+    padding: 20px ;
+
+  }
+}
 .site--dark {
   .mainpart {
     background-color: #111319;
-    transition: all .23s ease-in-out;
+    transition: all 0.23s ease-in-out;
     &__title {
       strong {
         color: #fff;
